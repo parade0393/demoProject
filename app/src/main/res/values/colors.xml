@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <!--状态栏的背景色-->
+    <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="selected_layout">#f1f8fe</color>
+    <color name="black">#000000</color>
+    <color name="text_main">#303030</color>
+    <color name="text_main_gray">#909090</color>
+    <color name="white">#ffffff</color>
+    <color name="common_yellow">#FF8700</color>
+    <color name="text_white_gray">#f5f5f5</color>
 </resources>

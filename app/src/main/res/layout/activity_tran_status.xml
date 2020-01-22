@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <com.parade.baseproject.util.view.CustomScrollView
+        android:id="@+id/scroll_view_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frame_case"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:background="@color/common_yellow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/title_bg_img_2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_96"
+                    android:layout_marginStart="@dimen/dp_26"
+                    android:layout_marginEnd="@dimen/dp_20">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="@color/text_white_gray"
+                            android:text="@string/current_state"/>
+
+                        <TextView
+                            android:id="@+id/tv_case_detail_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:textSize="@dimen/sp_24"
+                            android:textColor="@color/white"
+                            android:text="待受理"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_case_detail_handling"
+                            android:layout_width="@dimen/dp_67"
+                            android:layout_height="@dimen/dp_24"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:background="@drawable/handle_detail"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="@color/common_yellow"
+                            android:text="@string/handle_detail"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_flag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_174"
+                    android:background="@drawable/above_layout"/>
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:paddingTop="@dimen/dp_20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20">
+
+                    <TextView
+                        android:id="@+id/tv_case_detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/text_main"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="@dimen/dp_5"
+                        tools:text="龙鳞路东马沟入村口无证喷涂切割汽修厂不符合规定鳞路东马沟入村口无证喷涂切割汽修厂路东马沟入村口无证喷涂切割汽修"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/report_time_icon"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_case_detail_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:textSize="@dimen/sp_13"
+                        android:textColor="@color/text_main"
+                        tools:text="上报时间：2019-12-31"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/position_icon"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_case_detail_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:textSize="@dimen/sp_13"
+                        android:textColor="@color/text_main"
+                        tools:text="所在位置：龙鳞路东马沟村北"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20">
+
+                    <TextView
+                        android:id="@+id/tv_case_detail_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_400"
+                        android:textSize="@dimen/sp_13"
+                        android:textColor="@color/text_main"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_40">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_case"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.parade.baseproject.util.view.CustomScrollView>
+    <include layout="@layout/block_header_trans"/>
+</RelativeLayout>

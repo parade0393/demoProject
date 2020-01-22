@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_5"
+    android:paddingTop="@dimen/dp_5">
+
+    <TextView
+        android:id="@+id/tv_section_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/text_main"
+        tools:text="表示"/>
+
+</RelativeLayout>

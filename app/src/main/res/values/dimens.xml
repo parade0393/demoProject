@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+    <dimen name="dp_11">11dp</dimen>
+    <dimen name="dp_220">220dp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <dimen name="dp_96">96dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="dp_67">67dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_174">174dp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_160">160dp</dimen>
+    <dimen name="dp_400">400dp</dimen>
+</resources>

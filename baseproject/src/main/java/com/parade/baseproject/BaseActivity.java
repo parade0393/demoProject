@@ -1,6 +1,7 @@
 package com.parade.baseproject;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,19 +16,26 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutId());
+    }
+
+    @Override
+    public void setContentView(View view) {
+        super.setContentView(view);
+        afterSetContentView();
+    }
+
+    @Override
+    public void setContentView(int layoutResID) {
+        super.setContentView(layoutResID);
+        afterSetContentView();
+    }
+
+    private void afterSetContentView(){
 
         initViews();
         setEvents();
         initData();
     }
-
-    /**
-     * 获取当前的布局ID,加载布局界面
-     * 交由子类实现
-     * @return 布局资源id
-     */
-    protected abstract int getLayoutId();
 
     /**
      * 初始化控件
