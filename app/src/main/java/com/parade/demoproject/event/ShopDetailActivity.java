@@ -1,8 +1,6 @@
 package com.parade.demoproject.event;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -13,11 +11,9 @@ import com.google.android.material.tabs.TabLayout;
 import com.parade.baseproject.util.view.CustomScrollView;
 import com.parade.demoproject.DemoActivity;
 import com.parade.demoproject.R;
-import com.parade.demoproject.constant.Constant;
+import com.parade.demoproject.util.TabLayoutClickHelper;
 import com.qmuiteam.qmui.util.QMUIDisplayHelper;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
-
-import java.lang.reflect.Field;
 
 /**
  * author: parade岁月
@@ -81,41 +77,17 @@ public class ShopDetailActivity extends DemoActivity implements View.OnClickList
             }
         });
 
-        for (int i = 0; i < tab_layout.getTabCount(); i++) {
-            TabLayout.Tab tab = tab_layout.getTabAt(i);
-            if (null == tab) return;
-            // 这里使用到反射，拿到Tab对象后获取Class
-            Class c = tab.getClass();
-            try {
-                // Filed “字段、属性”的意思,c.getDeclaredField 获取私有属性。
-                // "view"是Tab的私有属性名称(可查看TabLayout源码8.0以上),类型是 TabView,TabLayout私有内部类。
-                //8.0以下是mView
-                Field field = null;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-                    //8.0及以上手机
-                    field = c.getDeclaredField("view");
-                }else {
-                    field = c.getDeclaredField("mView");
-                }
-                field.setAccessible(true);
-                final View view = (View) field.get(tab);
-                if (null == view) return;
-                view.setTag(i);
-                view.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        isScroll = false;
-                    }
-                });
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
     }
 
     @Override
     protected void setEvents() {
+        //关键点3：给tabLayout的tabs添加点击事件
+        TabLayoutClickHelper.addClick(tab_layout, new TabLayoutClickHelper.OnTabClickListener() {
+            @Override
+            public void onClick(TabLayout tabLayout, View view) {
+                isScroll = false;
+            }
+        });
         ll_back.setOnClickListener(this);
         tab_layout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -134,7 +106,8 @@ public class ShopDetailActivity extends DemoActivity implements View.OnClickList
                         break;
                 }
                 //关键点1：点击tab滑动页面到指定位置，利用scrollView的smoothScrollTo方法
-                if (!isScroll) {
+                if (!isScroll) {//如果是点击tabLayout
+                    //因为用户滑动页面也会导致tab选中，这里避开这种情况
                     scrollview.smoothScrollTo(0, top);
                 }
             }
@@ -165,12 +138,8 @@ public class ShopDetailActivity extends DemoActivity implements View.OnClickList
                 if (isScroll) {
                     //关键点2：由scrollView引起的滑动后移动tabLayout高亮显示指定的tab
                     if (y < ll_second.getTop()) {
-                        Log.e(Constant.TAG, "y0000:===" + y);
-                        Log.e(Constant.TAG, "top0000:====" + ll_third.getTop());
                         setScrollPos(0);
                     } else if (y >= ll_second.getTop() && y < ll_third.getTop()) {
-                        Log.e(Constant.TAG, "y1111:===" + y);
-                        Log.e(Constant.TAG, "top11111:====" + ll_third.getTop());
                         setScrollPos(1);
                     } else if (y >= ll_third.getTop()) {
                         setScrollPos(2);
@@ -196,8 +165,10 @@ public class ShopDetailActivity extends DemoActivity implements View.OnClickList
 
     private void setScrollPos(int newPos) {
         if (lastPos != newPos) {
-            //这里用tab_layout.getTabAt(newPos).select();会有问题触发tabLayout的事件，引发滑动体验问题
+            //此方法可能会导致scrollview的二次滑动，所以要在onTabSelected事件中要判断是不是由scrollview主动引起的滑动
             tab_layout.getTabAt(newPos).select();
+
+            //此方法只是从表面上选中了tab选项，实际tab_layout.getTabAt(0).isSelected()返回值仍可能是false，导致有时候点击tab页面不会滑动到指定锚点
             //            tab_layout.setScrollPosition(newPos,0,true);
         }
 
