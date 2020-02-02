@@ -1,4 +1,4 @@
-package com.parade.demoproject;
+package com.parade.demoproject.event;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.parade.baseproject.util.view.CustomScrollView;
+import com.parade.demoproject.DemoActivity;
+import com.parade.demoproject.R;
 import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 
 /**

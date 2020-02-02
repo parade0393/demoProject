@@ -27,6 +27,12 @@ public class CustomScrollView extends NestedScrollView {
 
     //定义接口用于回调
     public interface Callbacks {
+        /**
+         * @param x Current horizontal scroll origin. 当前滑动的x轴距离
+         * @param y Current vertical scroll origin. 当前滑动的y轴距离  像上滑t增大，向下滑t减小
+         * @param oldx Previous horizontal scroll origin. 上一次滑动的x轴距
+         * @param oldy Previous vertical scroll origin. 上一次滑动的y轴距离
+         */
         void onScrollChanged(int x, int y, int oldx, int oldy);
     }
 

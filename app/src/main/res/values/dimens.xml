@@ -28,4 +28,5 @@
     <dimen name="dp_3">3dp</dimen>
     <dimen name="dp_160">160dp</dimen>
     <dimen name="dp_400">400dp</dimen>
+    <dimen name="dp_05">0.5dp</dimen>
 </resources>

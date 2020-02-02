@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".event.ShopDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="@dimen/dp_56">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_layout"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_13"
+            android:paddingRight="@dimen/dp_13">
+
+            <ImageView
+                android:id="@+id/iv_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/return_icon" />
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:tabMode="fixed"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorColor="@color/common_yellow"/>
+
+    </RelativeLayout>
+
+    <com.parade.baseproject.util.view.CustomScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:showDividers="middle|end"
+            android:divider="@drawable/divider_item">
+            <!--产品-->
+            <LinearLayout
+                android:id="@+id/ll_first"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:text="产品"/>
+            </LinearLayout>
+
+            <!--详情-->
+            <LinearLayout
+                android:id="@+id/ll_second"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:text="详情"/>
+            </LinearLayout>
+
+            <!--推荐-->
+            <LinearLayout
+                android:id="@+id/ll_third"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:text="推荐"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.parade.baseproject.util.view.CustomScrollView>
+
+</LinearLayout>
