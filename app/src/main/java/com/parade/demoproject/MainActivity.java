@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.parade.demoproject.data.DataServer;
+import com.parade.demoproject.event.DoubleStickActivity;
 import com.parade.demoproject.event.ShopDetailActivity;
 import com.parade.demoproject.event.TranStatusActivity;
 import com.parade.demoproject.model.DemoModel;
@@ -68,6 +69,8 @@ public class MainActivity extends DemoActivity implements DemoAdapter.OnItemClic
             targetClass = TranStatusActivity.class;
         }else if (position == 2){
             targetClass = ShopDetailActivity.class;
+        }else if (position == 3){
+            targetClass = DoubleStickActivity.class;
         }
 
         if (targetClass != null){

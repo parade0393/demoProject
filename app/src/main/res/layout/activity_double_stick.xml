@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".event.DoubleStickActivity">
+
+    <com.parade.baseproject.util.view.CustomScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_96"
+                android:orientation="vertical"
+                android:background="@color/common_yellow">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_inside_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_56"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <include layout="@layout/header_stick_tablayout"/>
+            </LinearLayout>
+            <!--产品-->
+            <LinearLayout
+                android:id="@+id/ll_first"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:text="产品"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:background="@color/text_white_gray"/>
+            <!--详情-->
+            <LinearLayout
+                android:id="@+id/ll_second"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:text="详情"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:background="@color/text_white_gray"/>
+            <!--推荐-->
+            <LinearLayout
+                android:id="@+id/ll_third"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:text="推荐"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.parade.baseproject.util.view.CustomScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_out_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</RelativeLayout>

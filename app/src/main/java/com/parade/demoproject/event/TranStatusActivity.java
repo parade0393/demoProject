@@ -2,6 +2,7 @@ package com.parade.demoproject.event;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -18,12 +19,12 @@ import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
  * description: 修改状态栏
  * date: 2020-1-21 16:26:18
  */
-public class TranStatusActivity extends DemoActivity implements CustomScrollView.Callbacks {
+public class TranStatusActivity extends DemoActivity implements CustomScrollView.Callbacks, View.OnClickListener {
 
     private TextView tv_title;
     private CustomScrollView scroll_view_detail;
     private FrameLayout frame_flag,frame_case;
-    private LinearLayout ll_common_title;
+    private LinearLayout ll_common_title,ll_back;
     private int mHeight;
     private ImageView iv_return;
 
@@ -35,6 +36,7 @@ public class TranStatusActivity extends DemoActivity implements CustomScrollView
 
     @Override
     protected void initViews() {
+        ll_back = (LinearLayout) findViewById(R.id.ll_back);
         iv_return = (ImageView) findViewById(R.id.iv_return);
         ll_common_title = (LinearLayout) findViewById(R.id.ll_common_title);
         frame_case = (FrameLayout) findViewById(R.id.frame_case);
@@ -63,7 +65,7 @@ public class TranStatusActivity extends DemoActivity implements CustomScrollView
 
     @Override
     protected void setEvents() {
-
+        ll_back.setOnClickListener(this);
     }
 
     @Override
@@ -106,6 +108,14 @@ public class TranStatusActivity extends DemoActivity implements CustomScrollView
                 //标题栏处于最顶部
                 ll_common_title.setBackgroundColor(Color.argb(0, 255, 255, 255));
             }
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.ll_back:
+                finish();
         }
     }
 }
