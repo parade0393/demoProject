@@ -1,4 +1,4 @@
-package com.parade.demoproject;
+package com.parade.demoproject.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.parade.demoproject.R;
 import com.parade.demoproject.model.DemoModel;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class DemoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private OnItemClickListener mOnItemClickListener;
 
-    DemoAdapter(List<DemoModel> list) {
+    public DemoAdapter(List<DemoModel> list) {
         this.list = list;
     }
 

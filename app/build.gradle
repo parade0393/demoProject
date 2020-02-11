@@ -35,4 +35,5 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview-selection:1.0.0'
 
     implementation 'com.qmuiteam:qmui:2.0.0-alpha02'
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
 }

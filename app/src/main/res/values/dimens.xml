@@ -29,4 +29,8 @@
     <dimen name="dp_160">160dp</dimen>
     <dimen name="dp_400">400dp</dimen>
     <dimen name="dp_05">0.5dp</dimen>
+    <dimen name="sp_36">36sp</dimen>
+    <dimen name="dp_64">64dp</dimen>
+    <dimen name="dp_47">47dp</dimen>
+    <dimen name="sp_9">9sp</dimen>
 </resources>

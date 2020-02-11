@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".event.DoubleStickActivity"></activity>
+        <activity android:name=".view.group.BottomNavDemoActivity"></activity>
+        <activity android:name=".recyclerview.ContactActivity" />
+        <activity android:name=".event.DoubleStickActivity" />
         <activity android:name=".event.ShopDetailActivity" />
         <activity android:name=".event.TranStatusActivity" />
         <activity android:name=".MainActivity">

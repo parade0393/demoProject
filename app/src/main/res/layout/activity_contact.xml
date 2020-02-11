@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recyclerview.ContactActivity">
+
+    <include layout="@layout/block_header"
+        android:id="@+id/header"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"/>
+
+    <com.parade.demoproject.recyclerview.IndexBar
+        android:id="@+id/index_bar"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_alignParentEnd="true"
+        app:indexTextColor="@color/text_main_gray"
+        app:indexTextSize="@dimen/sp_16"/>
+
+    <TextView
+        android:id="@+id/tv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_36"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:background="@drawable/index_bar_indicator"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

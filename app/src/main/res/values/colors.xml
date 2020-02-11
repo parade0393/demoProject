@@ -11,4 +11,6 @@
     <color name="white">#ffffff</color>
     <color name="common_yellow">#FF8700</color>
     <color name="text_white_gray">#f5f5f5</color>
+    <color name="common_blue">#007aff</color>
+    <color name="common_gray">#e0e7ea</color>
 </resources>

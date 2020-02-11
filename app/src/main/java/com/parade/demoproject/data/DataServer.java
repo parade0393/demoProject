@@ -18,6 +18,18 @@ public class DataServer {
         demoModels.add(new DemoModel("状态栏透明以及滑动改变状态栏和标题栏",DemoModel.SECTION_CONTENT));
         demoModels.add(new DemoModel("仿淘宝详情页-tabLayout配合竖直滑动或者称为锚点",DemoModel.SECTION_CONTENT));
         demoModels.add(new DemoModel("吸顶加锚点",DemoModel.SECTION_CONTENT));
+        demoModels.add(new DemoModel("RecyclerView",DemoModel.SECTION_HEADER));
+        demoModels.add(new DemoModel("通讯录",DemoModel.SECTION_CONTENT));
+        demoModels.add(new DemoModel("自定义组合控件",DemoModel.SECTION_HEADER));
+        demoModels.add(new DemoModel("底部导航栏",DemoModel.SECTION_CONTENT));
         return demoModels;
+    }
+
+    public static String[] getContactNames(){
+        return new String[]{"孙尚香", "安其拉", "白起", "不知火舞", "@小马快跑", "_德玛西亚之力_", "妲己", "狄仁杰", "典韦", "韩信",
+                "老夫子", "刘邦", "刘禅", "鲁班七号", "墨子", "孙膑", "孙尚香", "孙悟空", "项羽", "亚瑟",
+                "周瑜", "庄周", "蔡文姬", "甄姬", "廉颇", "程咬金", "后羿", "扁鹊", "钟无艳", "小乔", "王昭君", "虞姬",
+                "李元芳", "张飞", "刘备", "牛魔", "张良", "兰陵王", "露娜", "貂蝉", "达摩", "曹操", "芈月", "荆轲", "高渐离",
+                "钟馗", "花木兰", "关羽", "李白", "宫本武藏", "吕布", "嬴政", "娜可露露", "武则天", "赵云", "姜子牙",};
     }
 }

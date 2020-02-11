@@ -11,11 +11,14 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.parade.demoproject.adapter.DemoAdapter;
 import com.parade.demoproject.data.DataServer;
 import com.parade.demoproject.event.DoubleStickActivity;
 import com.parade.demoproject.event.ShopDetailActivity;
 import com.parade.demoproject.event.TranStatusActivity;
 import com.parade.demoproject.model.DemoModel;
+import com.parade.demoproject.recyclerview.ContactActivity;
+import com.parade.demoproject.view.group.BottomNavDemoActivity;
 
 import java.util.List;
 
@@ -71,6 +74,10 @@ public class MainActivity extends DemoActivity implements DemoAdapter.OnItemClic
             targetClass = ShopDetailActivity.class;
         }else if (position == 3){
             targetClass = DoubleStickActivity.class;
+        }else if (position == 5){
+            targetClass = ContactActivity.class;
+        }else if (position == 7){
+            targetClass = BottomNavDemoActivity.class;
         }
 
         if (targetClass != null){

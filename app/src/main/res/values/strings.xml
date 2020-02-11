@@ -3,6 +3,8 @@
     <string name="current_state">当前状态</string>
     <string name="status">我是标题栏</string>
     <string name="handle_detail">办理详情</string>
+    <string name="phone_number">电话号码</string>
+    <string name="contact">通讯录</string>
     <string-array name="shop_detail">
         <item>产品</item>
         <item>详情</item>
