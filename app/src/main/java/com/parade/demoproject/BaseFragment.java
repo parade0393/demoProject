@@ -24,7 +24,7 @@ public abstract class BaseFragment extends Fragment {
     private boolean isViewCreated;
     //是否已经预加载过数据
     protected boolean isLoad;
-    private View mRootView;
+    protected View mRootView;
 
     public BaseFragment() {
 

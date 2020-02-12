@@ -121,4 +121,7 @@ public class DemoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         this.mOnItemClickListener = listener;
     }
 
+    public List<DemoModel> getData(){
+        return list;
+    }
 }

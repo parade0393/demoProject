@@ -15,14 +15,17 @@ public class DemoModel {
 
     private int itemViewType;
 
+    private Class targetClass;
+
     public DemoModel(String title, int itemViewType) {
-        this.title = title;
-        this.itemViewType = itemViewType;
+        this(title, itemViewType, null);
     }
 
-    public DemoModel(String title) {
-        this.title = title;
-    }
+   public DemoModel(String title, int itemViewType,Class targetClass){
+       this.title = title;
+       this.itemViewType = itemViewType;
+       this.targetClass = targetClass;
+   }
 
     public String getTitle() {
         return title;
@@ -38,5 +41,13 @@ public class DemoModel {
 
     public void setItemViewType(int itemViewType) {
         this.itemViewType = itemViewType;
+    }
+
+    public Class getTargetClass() {
+        return targetClass;
+    }
+
+    public void setTargetClass(Class targetClass) {
+        this.targetClass = targetClass;
     }
 }

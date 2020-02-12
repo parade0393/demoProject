@@ -1,6 +1,12 @@
 package com.parade.demoproject.data;
 
+import com.parade.demoproject.event.DoubleStickActivity;
+import com.parade.demoproject.event.ShopDetailActivity;
+import com.parade.demoproject.event.TranStatusActivity;
 import com.parade.demoproject.model.DemoModel;
+import com.parade.demoproject.recyclerview.ContactActivity;
+import com.parade.demoproject.view.group.BottomNavDemoActivity;
+import com.parade.demoproject.vp.VpAutoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,13 +21,15 @@ public class DataServer {
     public static List<DemoModel> getDemoDatas(){
         List<DemoModel> demoModels = new ArrayList<>();
         demoModels.add(new DemoModel("事件处理demo",DemoModel.SECTION_HEADER));
-        demoModels.add(new DemoModel("状态栏透明以及滑动改变状态栏和标题栏",DemoModel.SECTION_CONTENT));
-        demoModels.add(new DemoModel("仿淘宝详情页-tabLayout配合竖直滑动或者称为锚点",DemoModel.SECTION_CONTENT));
-        demoModels.add(new DemoModel("吸顶加锚点",DemoModel.SECTION_CONTENT));
+        demoModels.add(new DemoModel("状态栏透明以及滑动改变状态栏和标题栏",DemoModel.SECTION_CONTENT, TranStatusActivity.class));
+        demoModels.add(new DemoModel("仿淘宝详情页-tabLayout配合竖直滑动或者称为锚点",DemoModel.SECTION_CONTENT, ShopDetailActivity.class));
+        demoModels.add(new DemoModel("吸顶加锚点",DemoModel.SECTION_CONTENT, DoubleStickActivity.class));
         demoModels.add(new DemoModel("RecyclerView",DemoModel.SECTION_HEADER));
-        demoModels.add(new DemoModel("通讯录",DemoModel.SECTION_CONTENT));
+        demoModels.add(new DemoModel("通讯录",DemoModel.SECTION_CONTENT, ContactActivity.class));
         demoModels.add(new DemoModel("自定义组合控件",DemoModel.SECTION_HEADER));
-        demoModels.add(new DemoModel("底部导航栏",DemoModel.SECTION_CONTENT));
+        demoModels.add(new DemoModel("底部导航栏",DemoModel.SECTION_CONTENT, BottomNavDemoActivity.class));
+        demoModels.add(new DemoModel("ViewPager",DemoModel.SECTION_HEADER));
+        demoModels.add(new DemoModel("ViewPager高度自适应fragment高度",DemoModel.SECTION_CONTENT, VpAutoActivity.class));
         return demoModels;
     }
 

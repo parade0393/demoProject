@@ -51,7 +51,7 @@ public class ContactItemDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
-//        parent.getChildLayoutPosition(view); 区别
+        //parent.getChildLayoutPosition(view); 区别
         int position = parent.getChildAdapterPosition(view);
         if (modelList == null || modelList.size() == 0 || modelList.size() <= position || position < 0) {
             super.getItemOffsets(outRect, view, parent, state);
@@ -74,7 +74,7 @@ public class ContactItemDecoration extends RecyclerView.ItemDecoration {
             //考虑到recyclerview的内边距
             int left = parent.getPaddingLeft();
             int right = parent.getWidth() - parent.getPaddingRight();//?parent.getRight - parent.getPaddingRight()
-            if (isSectionHeader(position)){
+            if (isSectionHeader(position)){//分组头部
                 //1.先画矩形
                 c.drawRect(0,view.getTop() - dividerHeight,right,view.getTop(),mPaint);
                 //2.画圆
@@ -85,9 +85,9 @@ public class ContactItemDecoration extends RecyclerView.ItemDecoration {
                 mPaint.setTextSize(40);
                 mPaint.setColor(Color.WHITE);
                 c.drawText(modelList.get(position).getIndexTag(),QMUIDisplayHelper.dp2px(mContext,42),view.getTop()-dividerHeight/3,mPaint);
-            }else {
+            }else {//普通item
                 c.drawRect(0,view.getTop() - 1,right,view.getTop(),linePaint);
-//                c.drawLine(0,view.getTop() - 1,right,view.getTop(),linePaint);//话分割线,宽度不会撑满
+//                c.drawLine(0,view.getTop() - 1,right,view.getTop(),linePaint);//画分割线,宽度不会撑满
             }
         }
     }
@@ -109,7 +109,7 @@ public class ContactItemDecoration extends RecyclerView.ItemDecoration {
     }
 
     /**
-     * 是否是分组头部
+     * 是否是分组头部 当前位置和上一个位置的首字母不一样，则是分组的头部
      * @param position 位置
      * @return
      */

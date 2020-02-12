@@ -13,12 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.parade.demoproject.adapter.DemoAdapter;
 import com.parade.demoproject.data.DataServer;
-import com.parade.demoproject.event.DoubleStickActivity;
-import com.parade.demoproject.event.ShopDetailActivity;
-import com.parade.demoproject.event.TranStatusActivity;
 import com.parade.demoproject.model.DemoModel;
-import com.parade.demoproject.recyclerview.ContactActivity;
-import com.parade.demoproject.view.group.BottomNavDemoActivity;
 
 import java.util.List;
 
@@ -66,19 +61,8 @@ public class MainActivity extends DemoActivity implements DemoAdapter.OnItemClic
 
     @Override
     public void onItemClick(DemoAdapter adapter, View view, int position) {
-        int itemViewType = adapter.getItemViewType(position);
-        Class<?> targetClass = null;
-        if (itemViewType == DemoModel.SECTION_CONTENT && position == 1){
-            targetClass = TranStatusActivity.class;
-        }else if (position == 2){
-            targetClass = ShopDetailActivity.class;
-        }else if (position == 3){
-            targetClass = DoubleStickActivity.class;
-        }else if (position == 5){
-            targetClass = ContactActivity.class;
-        }else if (position == 7){
-            targetClass = BottomNavDemoActivity.class;
-        }
+        DemoModel demoModel = adapter.getData().get(position);
+        Class<?> targetClass =demoModel.getTargetClass();
 
         if (targetClass != null){
             Intent intent = new Intent(MainActivity.this, targetClass);
