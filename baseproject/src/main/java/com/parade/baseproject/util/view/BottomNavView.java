@@ -71,12 +71,12 @@ public class BottomNavView extends LinearLayout implements View.OnClickListener 
     }
 
     /** 未选中时字体颜色 */
-    public BottomNavView setmUnSelectedColor(int unSelectedColor) {
+    public BottomNavView setNormalTextColor(int unSelectedColor) {
         this.mUnSelectedTextColor = unSelectedColor;
         return this;
     }
     /** 选中时字体颜色 */
-    public BottomNavView setmSelectedTextColor(int mSelectedTextColor) {
+    public BottomNavView setSelectedTextColor(int mSelectedTextColor) {
         this.mSelectedTextColor = mSelectedTextColor;
         return this;
     }
@@ -86,12 +86,12 @@ public class BottomNavView extends LinearLayout implements View.OnClickListener 
         return this;
     }
     /** 未选中时字体颜色 */
-    public BottomNavView setmUnselectedIconArray(int[] mUnselectedIconArray) {
+    public BottomNavView setNormalIconArray(int[] mUnselectedIconArray) {
         this.mUnselectedIconArray = mUnselectedIconArray;
         return this;
     }
 
-    public BottomNavView setmSelectedIconArray(int[] mSelectedIconArray) {
+    public BottomNavView setSelectedIconArray(int[] mSelectedIconArray) {
         this.mSelectedIconArray = mSelectedIconArray;
         return this;
     }

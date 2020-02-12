@@ -86,10 +86,10 @@ public class BottomNavDemoActivity extends DemoActivity implements BottomNavView
 
         bottom_nav.setItemViewResId(R.layout.menu_main_activity)
                 .setmTextList(mTitleList)
-                .setmSelectedTextColor(getResources().getColor(R.color.common_blue))
-                .setmSelectedTextColor(getResources().getColor(R.color.common_gray))
-                .setmUnselectedIconArray(mUnSelectedIcon)
-                .setmSelectedIconArray(mSelectedIcon)
+                .setSelectedTextColor(getResources().getColor(R.color.common_blue))
+                .setNormalTextColor(getResources().getColor(R.color.common_gray))
+                .setNormalIconArray(mUnSelectedIcon)
+                .setSelectedIconArray(mSelectedIcon)
                 .setListener(this)
                 .build();
     }
