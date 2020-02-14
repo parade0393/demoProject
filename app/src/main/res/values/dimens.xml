@@ -35,4 +35,6 @@
     <dimen name="sp_9">9sp</dimen>
     <dimen name="dp_150">150dp</dimen>
     <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
 </resources>

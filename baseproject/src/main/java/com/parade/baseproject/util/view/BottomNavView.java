@@ -189,7 +189,7 @@ public class BottomNavView extends LinearLayout implements View.OnClickListener 
         setOrientation(HORIZONTAL);
         setGravity(Gravity.CENTER);
         Log.e(TAG, "init().....");
-        //先执行init，再执行build
+        //先执行init，再执行build,甚至在activity没有onCreate的时候都会执行，只要代码引入控件，就会执行
     }
 
     @Override

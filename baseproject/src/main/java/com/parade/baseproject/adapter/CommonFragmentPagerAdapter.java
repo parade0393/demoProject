@@ -2,6 +2,7 @@ package com.parade.baseproject.adapter;
 
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -22,12 +23,22 @@ public class CommonFragmentPagerAdapter extends FragmentPagerAdapter {
         this.fragmentList = fragmentList;
     }
 
+    public CommonFragmentPagerAdapter(FragmentManager fm, int behavior, List<Fragment> fragmentList) {
+        super(fm,behavior);
+        this.fragmentList = fragmentList;
+    }
+
     public CommonFragmentPagerAdapter(FragmentManager fm, List<Fragment> fragmentList,List<String> titleList) {
-        super(fm);
+        this(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, fragmentList, titleList);
+    }
+
+    private CommonFragmentPagerAdapter(FragmentManager fm, int behavior, List<Fragment> fragmentList, List<String> titleList) {
+        super(fm,behavior);
         this.fragmentList = fragmentList;
         this.titleList = titleList;
     }
 
+    @NonNull
     @Override
     public Fragment getItem(int position) {
         return fragmentList.get(position);

@@ -3,6 +3,10 @@ package com.parade.demoproject.data;
 import com.parade.demoproject.event.DoubleStickActivity;
 import com.parade.demoproject.event.ShopDetailActivity;
 import com.parade.demoproject.event.TranStatusActivity;
+import com.parade.demoproject.lifecycle.FgDialogActivity;
+import com.parade.demoproject.lifecycle.FragmentLazyActivity;
+import com.parade.demoproject.lifecycle.FragmentLifeActivity;
+import com.parade.demoproject.lifecycle.FragmentVpActivity;
 import com.parade.demoproject.model.DemoModel;
 import com.parade.demoproject.recyclerview.ContactActivity;
 import com.parade.demoproject.view.group.BottomNavDemoActivity;
@@ -29,7 +33,12 @@ public class DataServer {
         demoModels.add(new DemoModel("自定义组合控件",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("底部导航栏",DemoModel.SECTION_CONTENT, BottomNavDemoActivity.class));
         demoModels.add(new DemoModel("ViewPager",DemoModel.SECTION_HEADER));
-        demoModels.add(new DemoModel("ViewPager高度自适应fragment高度",DemoModel.SECTION_CONTENT, VpAutoActivity.class));
+        demoModels.add(new DemoModel("ViewPager高度自适应fragment高度", DemoModel.SECTION_CONTENT, VpAutoActivity.class));
+        demoModels.add(new DemoModel("生命周期",DemoModel.SECTION_HEADER));
+        demoModels.add(new DemoModel("Fragment生命周期transition", DemoModel.SECTION_CONTENT, FragmentLifeActivity.class));
+        demoModels.add(new DemoModel("Fragment生命周期viewpager", DemoModel.SECTION_CONTENT, FragmentVpActivity.class));
+        demoModels.add(new DemoModel("Dialog生命周期fragment", DemoModel.SECTION_CONTENT, FgDialogActivity.class));
+        demoModels.add(new DemoModel("fragment懒加载", DemoModel.SECTION_CONTENT, FragmentLazyActivity.class));
         return demoModels;
     }
 

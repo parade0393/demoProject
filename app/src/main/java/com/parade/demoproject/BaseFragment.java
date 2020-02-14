@@ -25,6 +25,7 @@ public abstract class BaseFragment extends Fragment {
     //是否已经预加载过数据
     protected boolean isLoad;
     protected View mRootView;
+    private boolean isFirstLoad;
 
     public BaseFragment() {
 
@@ -42,7 +43,7 @@ public abstract class BaseFragment extends Fragment {
         if (mRootView == null){
             mRootView = inflater.inflate(getLayoutId(), container, false);
         }
-
+        isFirstLoad = true;
         initViews();
         setEvents();
         initDatas();
@@ -128,10 +129,22 @@ public abstract class BaseFragment extends Fragment {
 
         isViewCreated = false;
         isLoad = false;
+        isFirstLoad = true;
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        if (isFirstLoad) {
+            delayLoad();
+            isFirstLoad = false;
+        }
+    }
+
+    /**
+     * androidx 懒加载
+     */
+    protected  void delayLoad(){
+
     }
 }

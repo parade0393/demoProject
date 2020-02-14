@@ -19,7 +19,7 @@ import com.parade.demoproject.listener.FragmentLifeListener;
  *date:  2020/2/11 10:46
  *description：测试
  */
-public class FragmentTwo extends BaseFragment {
+public class FragmentFour extends BaseFragment {
     private TextView tv_flag;
     private FragmentLifeListener lifeListener;
     @Override
@@ -30,7 +30,7 @@ public class FragmentTwo extends BaseFragment {
     @Override
     protected void initViews() {
         tv_flag = (TextView) findViewById(R.id.tv_flag);
-        tv_flag.setText("发现");
+        tv_flag.setText("设置");
     }
 
     @Override
@@ -55,7 +55,7 @@ public class FragmentTwo extends BaseFragment {
             lifeListener = (FragmentLifeListener) getActivity();
         }
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onAttach"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onAttach"+"\n");
         }
     }
 
@@ -63,14 +63,14 @@ public class FragmentTwo extends BaseFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onCreate"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onCreate"+"\n");
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onCreateView"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onCreateView"+"\n");
         }
         return super.onCreateView(inflater, container, savedInstanceState);
     }
@@ -79,7 +79,7 @@ public class FragmentTwo extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onViewCreated"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onViewCreated"+"\n");
         }
     }
 
@@ -87,7 +87,7 @@ public class FragmentTwo extends BaseFragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onActivityCreated"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onActivityCreated"+"\n");
         }
     }
 
@@ -95,7 +95,7 @@ public class FragmentTwo extends BaseFragment {
     public void onStart() {
         super.onStart();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onStart"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onStart"+"\n");
         }
     }
 
@@ -103,7 +103,7 @@ public class FragmentTwo extends BaseFragment {
     public void onResume() {
         super.onResume();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onResume"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onResume"+"\n");
         }
     }
 
@@ -111,7 +111,7 @@ public class FragmentTwo extends BaseFragment {
     public void onPause() {
         super.onPause();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onPause"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onPause"+"\n");
         }
     }
 
@@ -119,21 +119,23 @@ public class FragmentTwo extends BaseFragment {
     public void onStop() {
         super.onStop();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onStop"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onStop"+"\n");
         }
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        lifeListener.sendContent("FragmentTwo发现:==>onDestroyView"+"\n");
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentFour设置:==>onDestroyView"+"\n");
+        }
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onDestroy"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onDestroy"+"\n");
         }
     }
 
@@ -141,7 +143,7 @@ public class FragmentTwo extends BaseFragment {
     public void onDetach() {
         super.onDetach();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>onDetach"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>onDetach"+"\n");
         }
     }
 
@@ -149,7 +151,7 @@ public class FragmentTwo extends BaseFragment {
     protected void delayLoad() {
         super.delayLoad();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentTwo发现:==>数据加载"+"\n");
+            lifeListener.sendContent("FragmentFour设置:==>数据加载"+"\n");
         }
     }
 }

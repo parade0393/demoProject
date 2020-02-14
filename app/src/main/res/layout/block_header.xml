@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rl_common_title"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dp_56"
@@ -25,12 +26,37 @@
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="@dimen/dp_220"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/ll_back"
+        android:layout_toStartOf="@+id/ll_right"
         android:maxLines="1"
         android:ellipsize="end"
-        android:gravity="center_horizontal"
-        android:layout_centerInParent="true"
-        android:text=""
+        android:gravity="center"
+        tools:text="标题d"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20" />
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/selector_layout"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5">
+
+        <RadioButton
+            android:id="@+id/radio_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:textSize="@dimen/sp_13"
+            android:textColor="@color/text_main"
+            android:textAllCaps="false"
+            tools:text="viewpager"/>
+
+    </LinearLayout>
 </RelativeLayout>

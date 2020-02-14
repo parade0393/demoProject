@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".vp.VpAutoActivity"></activity>
+        <activity android:name=".lifecycle.FragmentLazyActivity"/>
+        <activity android:name=".lifecycle.FgDialogActivity"/>
+        <activity android:name=".lifecycle.FragmentVpActivity" />
+        <activity android:name=".lifecycle.FragmentLifeActivity" />
+        <activity android:name=".vp.VpAutoActivity" />
         <activity android:name=".view.group.BottomNavDemoActivity" />
         <activity android:name=".recyclerview.ContactActivity" />
         <activity android:name=".event.DoubleStickActivity" />
