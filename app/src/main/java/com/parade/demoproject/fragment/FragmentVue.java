@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.parade.baseproject.util.view.AutoHeightViewPager;
-import com.parade.demoproject.BaseFragment;
+import com.parade.demoproject.base.BaseFragment;
 import com.parade.demoproject.R;
 
 /***

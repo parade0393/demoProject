@@ -9,6 +9,7 @@ import com.parade.demoproject.lifecycle.FragmentLifeActivity;
 import com.parade.demoproject.lifecycle.FragmentVpActivity;
 import com.parade.demoproject.model.DemoModel;
 import com.parade.demoproject.recyclerview.ContactActivity;
+import com.parade.demoproject.recyclerview.TreeContactActivity;
 import com.parade.demoproject.view.group.BottomNavDemoActivity;
 import com.parade.demoproject.vp.VpAutoActivity;
 
@@ -30,6 +31,7 @@ public class DataServer {
         demoModels.add(new DemoModel("吸顶加锚点",DemoModel.SECTION_CONTENT, DoubleStickActivity.class));
         demoModels.add(new DemoModel("RecyclerView",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("通讯录",DemoModel.SECTION_CONTENT, ContactActivity.class));
+        demoModels.add(new DemoModel("树形结构通讯录",DemoModel.SECTION_CONTENT, TreeContactActivity.class));
         demoModels.add(new DemoModel("自定义组合控件",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("底部导航栏",DemoModel.SECTION_CONTENT, BottomNavDemoActivity.class));
         demoModels.add(new DemoModel("ViewPager",DemoModel.SECTION_HEADER));

@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.parade.demoproject.BaseFragment;
+import com.parade.demoproject.base.BaseFragment;
 import com.parade.demoproject.R;
 import com.parade.demoproject.listener.FragmentLifeListener;
 
@@ -126,7 +126,9 @@ public class FragmentTwo extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        lifeListener.sendContent("FragmentTwo发现:==>onDestroyView"+"\n");
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentTwo发现:==>onDestroyView"+"\n");
+        }
     }
 
     @Override

@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.parade.demoproject.BaseFragment;
+import com.parade.demoproject.base.BaseFragment;
 import com.parade.demoproject.R;
 import com.parade.demoproject.listener.FragmentLifeListener;
 
@@ -102,7 +102,9 @@ public class FragmentThree extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        lifeListener.sendContent("FragmentThree我的:==>onResume"+"\n");
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentThree我的:==>onResume"+"\n");
+        }
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.parade.demoproject;
+package com.parade.demoproject.base;
 
 
 import android.content.Context;

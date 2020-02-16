@@ -37,4 +37,11 @@
     <dimen name="dp_300">300dp</dimen>
     <dimen name="dp_1">1dp</dimen>
     <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_53">53dp</dimen>
+    <dimen name="dp_33">33dp</dimen>
 </resources>

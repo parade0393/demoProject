@@ -1,4 +1,4 @@
-package com.parade.demoproject.constant;
+package com.parade.demoproject.cons;
 
 /***
  *author: parade岁月
