@@ -27,36 +27,36 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:width="@dimen/dp_200"
         android:layout_centerInParent="true"
-        android:maxLines="1"
+        android:width="@dimen/dp_200"
         android:ellipsize="end"
         android:gravity="center"
-        tools:text="标题d"
+        android:maxLines="1"
         android:textColor="@color/black"
-        android:textSize="@dimen/sp_20" />
+        android:textSize="@dimen/sp_20"
+        tools:text="标题d" />
 
     <LinearLayout
         android:id="@+id/ll_right"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:visibility="gone"
-        android:background="@drawable/selector_layout"
         android:layout_alignParentEnd="true"
-        android:gravity="center"
         android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/selector_layout"
+        android:gravity="center"
         android:paddingStart="@dimen/dp_5"
-        android:paddingEnd="@dimen/dp_5">
+        android:paddingEnd="@dimen/dp_5"
+        android:visibility="gone">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/radio_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:button="@null"
-            android:textSize="@dimen/sp_13"
-            android:textColor="@color/text_main"
             android:textAllCaps="false"
-            tools:text="viewpager"/>
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/sp_13"
+            tools:text="viewpager" />
 
     </LinearLayout>
 </RelativeLayout>

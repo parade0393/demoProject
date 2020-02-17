@@ -3,5 +3,6 @@
     <declare-styleable name="IndexBar">
         <attr name="indexTextSize" format="dimension" />
         <attr name="indexTextColor" format="color" />
+        <attr name="downTextColor" format="color" />
     </declare-styleable>
 </resources>

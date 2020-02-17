@@ -29,8 +29,6 @@ public class TreeRecyclerDemoAdapter extends TreeRecyclerViewAdapter {
         this.mulitSelect=mulitSelect;
     }
 
-
-
     @Override
     public void onBindViewHolder(final Node node, final RecyclerView.ViewHolder holder, int position) {
         final ViewHolder viewHolder = (ViewHolder) holder;
