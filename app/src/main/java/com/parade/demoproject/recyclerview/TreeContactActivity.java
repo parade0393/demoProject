@@ -320,7 +320,7 @@ public class TreeContactActivity extends DemoActivity implements View.OnClickLis
 
         for (int i = 0; i < letterListOrigin.size(); i++) {
             if (tag.equals(letterListOrigin.get(i).getFirstLetter())){
-                list_view.scrollToPosition(i);
+//                list_view.scrollToPosition(i);
                 layoutManager.scrollToPositionWithOffset(i, 0);
                 break;
             }
