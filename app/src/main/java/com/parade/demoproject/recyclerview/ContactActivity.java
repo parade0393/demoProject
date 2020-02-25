@@ -51,6 +51,9 @@ public class ContactActivity extends DemoActivity implements View.OnClickListene
     protected void initViews() {
         tv_title = (TextView) findViewById(R.id.tv_title);
         tv_title.setText(getResources().getString(R.string.contact));
+        int widthMeasureSpec = View.MeasureSpec.makeMeasureSpec((1 << 30) -1, View.MeasureSpec.AT_MOST);
+        int heightMeasureSpec = View.MeasureSpec.makeMeasureSpec((1 << 30) -1, View.MeasureSpec.AT_MOST);
+        tv_title.measure(widthMeasureSpec,heightMeasureSpec);
         tv_indicator = (TextView) findViewById(R.id.tv_indicator);
         index_bar = (IndexBar) findViewById(R.id.index_bar);
         tv_indicator = (TextView) findViewById(R.id.tv_indicator);

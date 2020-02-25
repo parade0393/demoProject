@@ -11,6 +11,7 @@ import com.parade.demoproject.model.DemoModel;
 import com.parade.demoproject.recyclerview.ContactActivity;
 import com.parade.demoproject.recyclerview.TreeContactActivity;
 import com.parade.demoproject.view.group.BottomNavDemoActivity;
+import com.parade.demoproject.view.group.GroupDemoActivity;
 import com.parade.demoproject.vp.VpAutoActivity;
 
 import java.util.ArrayList;
@@ -34,12 +35,12 @@ public class DataServer {
         demoModels.add(new DemoModel("树形结构通讯录",DemoModel.SECTION_CONTENT, TreeContactActivity.class));
         demoModels.add(new DemoModel("自定义组合控件",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("底部导航栏",DemoModel.SECTION_CONTENT, BottomNavDemoActivity.class));
+        demoModels.add(new DemoModel("其它demo",DemoModel.SECTION_CONTENT, GroupDemoActivity.class));
         demoModels.add(new DemoModel("ViewPager",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("ViewPager高度自适应fragment高度", DemoModel.SECTION_CONTENT, VpAutoActivity.class));
         demoModels.add(new DemoModel("生命周期",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("Fragment生命周期transition", DemoModel.SECTION_CONTENT, FragmentLifeActivity.class));
         demoModels.add(new DemoModel("Fragment生命周期viewpager", DemoModel.SECTION_CONTENT, FragmentVpActivity.class));
-        demoModels.add(new DemoModel("Dialog生命周期fragment", DemoModel.SECTION_CONTENT, FgDialogActivity.class));
         demoModels.add(new DemoModel("fragment懒加载", DemoModel.SECTION_CONTENT, FragmentLazyActivity.class));
         return demoModels;
     }

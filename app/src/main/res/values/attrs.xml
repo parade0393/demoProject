@@ -5,4 +5,12 @@
         <attr name="indexTextColor" format="color" />
         <attr name="downTextColor" format="color" />
     </declare-styleable>
+    <declare-styleable name="LoginButton">
+        <attr name="text" format="string"/>
+        <attr name="loadingText" format="string"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="barColor" format="color"/>
+    </declare-styleable>
+
 </resources>
