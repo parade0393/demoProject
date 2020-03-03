@@ -6,11 +6,34 @@
         <attr name="downTextColor" format="color" />
     </declare-styleable>
     <declare-styleable name="LoginButton">
-        <attr name="text" format="string"/>
-        <attr name="loadingText" format="string"/>
-        <attr name="textColor" format="color"/>
-        <attr name="textSize" format="dimension"/>
-        <attr name="barColor" format="color"/>
+        <attr name="text" format="string" />
+        <attr name="loadingText" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="barColor" format="color" />
     </declare-styleable>
 
+    <declare-styleable name="CodeInputView">
+        <!--验证码数量-->
+        <attr format="integer" name="itemCount"/>
+        <!--验证码宽度-->
+        <attr format="dimension" name="itemWidth"/>
+        <!--验证码背景-->
+        <attr format="reference" name="itemBackground"/>
+        <!--验证码间距-->
+        <attr format="dimension" name="gapWidth"/>
+        <!--验证码字体大小-->
+        <attr format="dimension" name="ciTextSize"/>
+        <!--验证码字体颜色-->
+        <attr format="color|reference" name="ciTextColor"/>
+
+        <!--键盘类型-->
+        <attr name="ciInputType">
+            <enum name="number" value="0"/>
+            <enum name="text" value="1"/>
+            <enum name="textCapCharacters" value="2"/>
+            <enum name="password" value="3"/>
+            <enum name="numberPassword" value="4"/>
+        </attr>
+    </declare-styleable>
 </resources>

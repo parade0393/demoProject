@@ -3,7 +3,6 @@ package com.parade.demoproject.data;
 import com.parade.demoproject.event.DoubleStickActivity;
 import com.parade.demoproject.event.ShopDetailActivity;
 import com.parade.demoproject.event.TranStatusActivity;
-import com.parade.demoproject.lifecycle.FgDialogActivity;
 import com.parade.demoproject.lifecycle.FragmentLazyActivity;
 import com.parade.demoproject.lifecycle.FragmentLifeActivity;
 import com.parade.demoproject.lifecycle.FragmentVpActivity;
@@ -11,7 +10,7 @@ import com.parade.demoproject.model.DemoModel;
 import com.parade.demoproject.recyclerview.ContactActivity;
 import com.parade.demoproject.recyclerview.TreeContactActivity;
 import com.parade.demoproject.view.group.BottomNavDemoActivity;
-import com.parade.demoproject.view.group.GroupDemoActivity;
+import com.parade.demoproject.view.GroupDemoActivity;
 import com.parade.demoproject.vp.VpAutoActivity;
 
 import java.util.ArrayList;

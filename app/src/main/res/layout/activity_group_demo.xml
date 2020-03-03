@@ -5,9 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.group.GroupDemoActivity">
+    android:gravity="center_horizontal"
+    tools:context=".view.GroupDemoActivity">
 
     <include layout="@layout/block_header"/>
+
+
+    <com.parade.demoproject.view.one.CodeInputView
+        android:id="@+id/codeInput_1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        app:itemBackground="@drawable/selector_code_input_item_square"
+        app:itemCount="6"
+        app:itemWidth="@dimen/dp_40"
+        app:gapWidth="@dimen/dp_10"
+        app:ciTextSize="@dimen/sp_20"
+        app:ciTextColor="@color/white"
+        app:ciInputType="number"/>
+
+    <com.parade.demoproject.view.one.CodeInputView
+        android:id="@+id/codeInput_2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        app:itemBackground="@drawable/selector_code_input_item_square_border"
+        app:itemCount="6"
+        app:itemWidth="@dimen/dp_40"
+        app:gapWidth="@dimen/dp_10"
+        app:ciTextSize="@dimen/sp_20"
+        app:ciTextColor="@color/text_main"
+        app:ciInputType="text"/>
+
+    <com.parade.demoproject.view.one.CodeInputView
+        android:id="@+id/codeInput_3"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        app:itemBackground="@drawable/code_input_item_bottom_line"
+        app:itemCount="6"
+        app:itemWidth="@dimen/dp_40"
+        app:gapWidth="@dimen/dp_10"
+        app:ciTextSize="@dimen/sp_20"
+        app:ciTextColor="@color/text_main"
+        app:ciInputType="password"/>
 
 
 
