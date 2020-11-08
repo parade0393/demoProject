@@ -112,8 +112,7 @@ public class TreeContactActivity extends DemoActivity implements View.OnClickLis
         treeListOrigin = new ArrayList<>();
         String contactJson = CommonUtils.getJsonFromeAsset(this, "contact.json");
         TLog.e(Constant.TAG, contactJson);
-        Type type = new TypeToken<List<TreeItem>>() {
-        }.getType();
+        Type type = new TypeToken<List<TreeItem>>() {}.getType();
         List<TreeItem> o = new Gson().fromJson(contactJson, type);
         TLog.e(Constant.TAG, o.toString());
 

@@ -56,7 +56,6 @@ public class ContactActivity extends DemoActivity implements View.OnClickListene
         tv_title.measure(widthMeasureSpec,heightMeasureSpec);
         tv_indicator = (TextView) findViewById(R.id.tv_indicator);
         index_bar = (IndexBar) findViewById(R.id.index_bar);
-        tv_indicator = (TextView) findViewById(R.id.tv_indicator);
         ll_back = (LinearLayout) findViewById(R.id.ll_back);
         recycler_contact = (RecyclerView) findViewById(R.id.recycler_contact);
         layoutManager = new LinearLayoutManager(this);
