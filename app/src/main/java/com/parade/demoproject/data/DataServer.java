@@ -3,6 +3,7 @@ package com.parade.demoproject.data;
 import com.parade.demoproject.event.DoubleStickActivity;
 import com.parade.demoproject.event.ShopDetailActivity;
 import com.parade.demoproject.event.TranStatusActivity;
+import com.parade.demoproject.handler.HandleDemoActivity;
 import com.parade.demoproject.lifecycle.FragmentLazyActivity;
 import com.parade.demoproject.lifecycle.FragmentLifeActivity;
 import com.parade.demoproject.lifecycle.FragmentVpActivity;
@@ -41,6 +42,8 @@ public class DataServer {
         demoModels.add(new DemoModel("Fragment生命周期transition", DemoModel.SECTION_CONTENT, FragmentLifeActivity.class));
         demoModels.add(new DemoModel("Fragment生命周期viewpager", DemoModel.SECTION_CONTENT, FragmentVpActivity.class));
         demoModels.add(new DemoModel("fragment懒加载", DemoModel.SECTION_CONTENT, FragmentLazyActivity.class));
+        demoModels.add(new DemoModel("进程通信相关", DemoModel.SECTION_HEADER));
+        demoModels.add(new DemoModel("handler", DemoModel.SECTION_CONTENT, HandleDemoActivity.class));
         return demoModels;
     }
 
