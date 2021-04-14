@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.parade.baseproject.adapter.CommonFragmentPagerAdapter;
@@ -26,7 +27,7 @@ import java.util.List;
  * description: fragment集合viewpager声明周期
  * date: 2020-2-14 9:24:55
  */
-public class FragmentVpActivity extends DemoActivity implements View.OnClickListener, BottomNavView.OnBottomViewItemSelectedListener, FragmentLifeListener {
+public class FragmentLazyWithOffpageActivity extends DemoActivity implements View.OnClickListener, BottomNavView.OnBottomViewItemSelectedListener, FragmentLifeListener {
     private ViewPager viewpager;
     private String[] mTitleList;
     private int[] mSelectedIcon,mUnSelectedIcon;
@@ -52,7 +53,7 @@ public class FragmentVpActivity extends DemoActivity implements View.OnClickList
         tv_title = (TextView) findViewById(R.id.tv_title);
         tv_cycle = (TextView) findViewById(R.id.tv_cycle);
         bottom_nav = (BottomNavView) findViewById(R.id.bottom_nav);
-        tv_title.setText("fragment声明周期vp");
+        tv_title.setText("fragment懒加载");
     }
 
     @Override
@@ -110,8 +111,8 @@ public class FragmentVpActivity extends DemoActivity implements View.OnClickList
         fragmentList.add(fragmentTwo);
         fragmentList.add(fragmentThree);
         fragmentList.add(fragmentFour);
-
-        viewpager.setAdapter(new CommonFragmentPagerAdapter(getSupportFragmentManager(),fragmentList));
+        viewpager.setOffscreenPageLimit(fragmentList.size());
+        viewpager.setAdapter(new CommonFragmentPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,fragmentList));
     }
 
     @Override

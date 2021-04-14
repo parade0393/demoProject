@@ -26,7 +26,7 @@ import java.util.List;
  * description: fragment集合viewpager声明周期
  * date: 2020-2-14 9:24:55
  */
-public class FragmentVpActivity extends DemoActivity implements View.OnClickListener, BottomNavView.OnBottomViewItemSelectedListener, FragmentLifeListener {
+public class VpOffscreenPageActivity extends DemoActivity implements View.OnClickListener, BottomNavView.OnBottomViewItemSelectedListener, FragmentLifeListener {
     private ViewPager viewpager;
     private String[] mTitleList;
     private int[] mSelectedIcon,mUnSelectedIcon;
@@ -110,7 +110,7 @@ public class FragmentVpActivity extends DemoActivity implements View.OnClickList
         fragmentList.add(fragmentTwo);
         fragmentList.add(fragmentThree);
         fragmentList.add(fragmentFour);
-
+        viewpager.setOffscreenPageLimit(fragmentList.size());
         viewpager.setAdapter(new CommonFragmentPagerAdapter(getSupportFragmentManager(),fragmentList));
     }
 

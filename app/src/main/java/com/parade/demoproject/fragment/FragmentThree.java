@@ -39,6 +39,14 @@ public class FragmentThree extends BaseFragment {
     }
 
     @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentThree首页:==>setUserVisibleHint::"+isVisibleToUser+"\n");
+        }
+    }
+
+    @Override
     protected void lazyLoad() {
 
     }

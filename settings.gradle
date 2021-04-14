@@ -1,1 +1,2 @@
+include ':xTabLayout'
 include ':app', ':baseproject'

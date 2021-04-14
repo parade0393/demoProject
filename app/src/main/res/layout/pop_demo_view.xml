@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"
+        android:text="子项1"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"
+        android:text="子项2"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"
+        android:text="子项3"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"
+        android:text="子项4"
+        android:gravity="center"/>
+
+
+
+</LinearLayout>

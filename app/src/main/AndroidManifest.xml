@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.GroupDemoActivity"></activity>
+        <activity android:name=".coor.ViewPagerDemoActivity"></activity>
+        <activity android:name=".coor.HangTopActivity" />
+        <activity android:name=".lifecycle.FragmentLazyWithOffpageActivity" />
+        <activity android:name=".lifecycle.VpOffscreenPageActivity" />
+        <activity android:name=".view.GroupDemoActivity" />
         <activity android:name=".recyclerview.TreeContactActivity" />
         <activity android:name=".lifecycle.FragmentLazyActivity" />
         <activity android:name=".lifecycle.FgDialogActivity" />

@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.Lifecycle;
 
 import com.parade.demoproject.base.BaseFragment;
 import com.parade.demoproject.R;
@@ -57,7 +58,8 @@ public class FragmentOne extends BaseFragment {
             lifeListener = (FragmentLifeListener) getActivity();
         }
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onAttach"+"\n");
+
+            lifeListener.sendContent("FragmentOne首页:==>onAttach::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -66,7 +68,7 @@ public class FragmentOne extends BaseFragment {
         super.onCreate(savedInstanceState);
         Log.e("Mylog-fragmentOne", "onCreate");
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onCreate"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onCreate::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -74,7 +76,7 @@ public class FragmentOne extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.e("Mylog-fragmentOne", "onCreateView");
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onCreateView"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onCreateView::"+handleLifecycleData()+"\n");
         }
         return super.onCreateView(inflater, container, savedInstanceState);
     }
@@ -83,7 +85,7 @@ public class FragmentOne extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onViewCreated"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onViewCreated::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -92,7 +94,7 @@ public class FragmentOne extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
         Log.e("Mylog-fragmentOne", "onActivityCreated");
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onActivityCreated"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onActivityCreated::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -101,7 +103,7 @@ public class FragmentOne extends BaseFragment {
         super.onStart();
         Log.e("Mylog-fragmentOne", "onStart");
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onStart"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onStart::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -109,7 +111,7 @@ public class FragmentOne extends BaseFragment {
     public void onResume() {
         super.onResume();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onResume"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onResume::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -117,7 +119,7 @@ public class FragmentOne extends BaseFragment {
     public void onPause() {
         super.onPause();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onPause"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onPause::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -125,7 +127,7 @@ public class FragmentOne extends BaseFragment {
     public void onStop() {
         super.onStop();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onStop"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onStop::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -133,7 +135,7 @@ public class FragmentOne extends BaseFragment {
     public void onDestroyView() {
         super.onDestroyView();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onDestroyView"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onDestroyView::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -141,7 +143,15 @@ public class FragmentOne extends BaseFragment {
     public void onDestroy() {
         super.onDestroy();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onDestroy"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onDestroy::"+handleLifecycleData()+"\n");
+        }
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentOne首页:==>setUserVisibleHint::"+isVisibleToUser+"\n");
         }
     }
 
@@ -149,7 +159,7 @@ public class FragmentOne extends BaseFragment {
     public void onDetach() {
         super.onDetach();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>onDetach"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>onDetach::"+handleLifecycleData()+"\n");
         }
     }
 
@@ -157,7 +167,25 @@ public class FragmentOne extends BaseFragment {
     protected void delayLoad() {
         super.delayLoad();
         if (lifeListener != null){
-            lifeListener.sendContent("FragmentOne首页:==>数据加载"+"\n");
+            lifeListener.sendContent("FragmentOne首页:==>数据加载::"+handleLifecycleData()+"\n");
         }
     }
+
+    private String handleLifecycleData(){
+        String stateString = "";
+        Lifecycle.State currentState = getLifecycle().getCurrentState();
+        if (currentState == Lifecycle.State.CREATED){
+            stateString = "State.CREATED";
+        }else if (currentState == Lifecycle.State.INITIALIZED){
+            stateString = "State.INITIALIZED";
+        }else if (currentState == Lifecycle.State.STARTED){
+            stateString = "State.STARTED";
+        }else if (currentState == Lifecycle.State.RESUMED){
+            stateString = "State.RESUMED";
+        }else if (currentState == Lifecycle.State.DESTROYED){
+            stateString = "State.DESTROYED";
+        }
+        return stateString;
+    }
+
 }

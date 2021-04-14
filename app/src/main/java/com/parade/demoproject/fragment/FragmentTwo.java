@@ -34,6 +34,14 @@ public class FragmentTwo extends BaseFragment {
     }
 
     @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentTwo首页:==>setUserVisibleHint::"+isVisibleToUser+"\n");
+        }
+    }
+
+    @Override
     protected void initDatas() {
 
     }

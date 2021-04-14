@@ -68,7 +68,6 @@ public abstract class BaseFragment extends Fragment {
         if (!isViewCreated){
             return;
         }
-
         //第二个条件必须参加
         if (getUserVisibleHint() && !isLoad){
             lazyLoad();
