@@ -5,6 +5,12 @@ import com.parade.demoproject.event.DoubleStickActivity;
 import com.parade.demoproject.coor.HangTopActivity;
 import com.parade.demoproject.event.ShopDetailActivity;
 import com.parade.demoproject.event.TranStatusActivity;
+import com.parade.demoproject.event.demo.EventDelivery1Activity;
+import com.parade.demoproject.event.demo.EventDelivery2Activity;
+import com.parade.demoproject.event.demo.EventDelivery3Activity;
+import com.parade.demoproject.event.demo.EventDelivery4Activity;
+import com.parade.demoproject.event.demo.EventDelivery5Activity;
+import com.parade.demoproject.event.demo.EventDelivery6Activity;
 import com.parade.demoproject.lifecycle.FragmentLazyActivity;
 import com.parade.demoproject.lifecycle.FragmentLazyWithOffpageActivity;
 import com.parade.demoproject.lifecycle.FragmentLifeActivity;
@@ -33,6 +39,13 @@ public class DataServer {
         demoModels.add(new DemoModel("状态栏透明以及滑动改变状态栏和标题栏",DemoModel.SECTION_CONTENT, TranStatusActivity.class));
         demoModels.add(new DemoModel("仿淘宝详情页-tabLayout配合竖直滑动或者称为锚点",DemoModel.SECTION_CONTENT, ShopDetailActivity.class));
         demoModels.add(new DemoModel("吸顶加锚点",DemoModel.SECTION_CONTENT, DoubleStickActivity.class));
+        demoModels.add(new DemoModel("事件处理日志",DemoModel.SECTION_HEADER));
+        demoModels.add(new DemoModel("只重写打印日志记录调用顺序", DemoModel.SECTION_CONTENT, EventDelivery1Activity.class));
+        demoModels.add(new DemoModel("重写onIntercepted例子1", DemoModel.SECTION_CONTENT, EventDelivery2Activity.class));
+        demoModels.add(new DemoModel("重写onIntercepted例子2", DemoModel.SECTION_CONTENT, EventDelivery3Activity.class));
+        demoModels.add(new DemoModel("重写onIntercepted例子3", DemoModel.SECTION_CONTENT, EventDelivery4Activity.class));
+        demoModels.add(new DemoModel("重写onIntercepted例子4", DemoModel.SECTION_CONTENT, EventDelivery5Activity.class));
+        demoModels.add(new DemoModel("重写onIntercepted例子5", DemoModel.SECTION_CONTENT, EventDelivery6Activity.class));
 
         demoModels.add(new DemoModel("RecyclerView",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("通讯录",DemoModel.SECTION_CONTENT, ContactActivity.class));
