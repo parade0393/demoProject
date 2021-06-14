@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".vp.VpAutoAcKttivity"/>
         <activity android:name=".event.demo.EventDelivery6Activity"/>
         <activity android:name=".event.demo.EventDelivery5Activity"/>
         <activity android:name=".event.demo.EventDelivery4Activity"/>
