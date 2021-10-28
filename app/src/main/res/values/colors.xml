@@ -14,4 +14,5 @@
     <color name="common_blue">#007aff</color>
     <color name="common_gray">#e0e7ea</color>
     <color name="search_bg">#f5f6fa</color>
+    <color name="black_primary">#222222</color>
 </resources>

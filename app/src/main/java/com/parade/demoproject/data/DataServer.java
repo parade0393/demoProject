@@ -18,6 +18,7 @@ import com.parade.demoproject.lifecycle.FragmentVpActivity;
 import com.parade.demoproject.lifecycle.VpOffscreenPageActivity;
 import com.parade.demoproject.model.DemoModel;
 import com.parade.demoproject.recyclerview.ContactActivity;
+import com.parade.demoproject.recyclerview.RcyMultiLayoutOneActivity;
 import com.parade.demoproject.recyclerview.TreeContactActivity;
 import com.parade.demoproject.view.group.BottomNavDemoActivity;
 import com.parade.demoproject.view.GroupDemoActivity;
@@ -51,6 +52,7 @@ public class DataServer {
         demoModels.add(new DemoModel("RecyclerView",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("通讯录",DemoModel.SECTION_CONTENT, ContactActivity.class));
         demoModels.add(new DemoModel("树形结构通讯录",DemoModel.SECTION_CONTENT, TreeContactActivity.class));
+        demoModels.add(new DemoModel("多布局", DemoModel.SECTION_CONTENT, RcyMultiLayoutOneActivity.class));
         demoModels.add(new DemoModel("自定义组合控件",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("底部导航栏",DemoModel.SECTION_CONTENT, BottomNavDemoActivity.class));
         demoModels.add(new DemoModel("其它demo",DemoModel.SECTION_CONTENT, GroupDemoActivity.class));
