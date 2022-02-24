@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".recyclerview.RcyMultiLayoutOneActivity"></activity>
+        <activity android:name=".sysui.MyFullScreenActivity" android:theme="@style/AppTheme.Full"/>
+        <activity
+            android:name=".sysui.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/AppTheme.Fullscreen"/>
+        <activity android:name=".recyclerview.RcyMultiLayoutGridActivity" />
+        <activity android:name=".recyclerview.RcyMultiLayoutOneActivity" />
         <activity android:name=".vp.VpAutoAcKttivity" />
         <activity android:name=".event.demo.EventDelivery6Activity" />
         <activity android:name=".event.demo.EventDelivery5Activity" />

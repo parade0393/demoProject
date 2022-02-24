@@ -12,6 +12,7 @@ data class RcyMultilayoutBean(
         val listIndex:Int,
         val mData:Any?,
         override val itemType: Int,
+        val spanSize:Int? = 0,
         var isExpand:Boolean = false,
 ):MultiItemEntity{
     companion object{
@@ -20,5 +21,8 @@ data class RcyMultilayoutBean(
         const val FOOTER = 3
         const val DIVIDER = 4
         const val EMPTY = 5
+
+        const val GRID_SPAN_SIZE = 1//表示item占1/4
+        const val LINEAR_SPAN_SIZE = 4//表示item占4份
     }
 }

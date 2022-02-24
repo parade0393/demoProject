@@ -15,25 +15,29 @@
 
     <declare-styleable name="CodeInputView">
         <!--验证码数量-->
-        <attr format="integer" name="itemCount"/>
+        <attr name="itemCount" format="integer" />
         <!--验证码宽度-->
-        <attr format="dimension" name="itemWidth"/>
+        <attr name="itemWidth" format="dimension" />
         <!--验证码背景-->
-        <attr format="reference" name="itemBackground"/>
+        <attr name="itemBackground" format="reference" />
         <!--验证码间距-->
-        <attr format="dimension" name="gapWidth"/>
+        <attr name="gapWidth" format="dimension" />
         <!--验证码字体大小-->
-        <attr format="dimension" name="ciTextSize"/>
+        <attr name="ciTextSize" format="dimension" />
         <!--验证码字体颜色-->
-        <attr format="color|reference" name="ciTextColor"/>
+        <attr name="ciTextColor" format="color|reference" />
 
         <!--键盘类型-->
         <attr name="ciInputType">
-            <enum name="number" value="0"/>
-            <enum name="text" value="1"/>
-            <enum name="textCapCharacters" value="2"/>
-            <enum name="password" value="3"/>
-            <enum name="numberPassword" value="4"/>
+            <enum name="number" value="0" />
+            <enum name="text" value="1" />
+            <enum name="textCapCharacters" value="2" />
+            <enum name="password" value="3" />
+            <enum name="numberPassword" value="4" />
         </attr>
+    </declare-styleable>
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
     </declare-styleable>
 </resources>

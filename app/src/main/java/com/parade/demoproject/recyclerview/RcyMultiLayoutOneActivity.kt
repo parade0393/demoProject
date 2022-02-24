@@ -14,6 +14,8 @@ class RcyMultiLayoutOneActivity : DemoActivity() {
     private val oneAdapter by lazy { OneAdapter() }
     private var multiAdapter:RcyMultiLayoutAdapter? = null
     private val originalList by lazy { mutableListOf<RcyMultilayoutBean>() }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rcy_multi_layout_one)

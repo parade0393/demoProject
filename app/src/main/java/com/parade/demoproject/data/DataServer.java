@@ -18,8 +18,11 @@ import com.parade.demoproject.lifecycle.FragmentVpActivity;
 import com.parade.demoproject.lifecycle.VpOffscreenPageActivity;
 import com.parade.demoproject.model.DemoModel;
 import com.parade.demoproject.recyclerview.ContactActivity;
+import com.parade.demoproject.recyclerview.RcyMultiLayoutGridActivity;
 import com.parade.demoproject.recyclerview.RcyMultiLayoutOneActivity;
 import com.parade.demoproject.recyclerview.TreeContactActivity;
+import com.parade.demoproject.sysui.FullscreenActivity;
+import com.parade.demoproject.sysui.MyFullScreenActivity;
 import com.parade.demoproject.view.group.BottomNavDemoActivity;
 import com.parade.demoproject.view.GroupDemoActivity;
 import com.parade.demoproject.vp.VpAutoAcKttivity;
@@ -53,6 +56,7 @@ public class DataServer {
         demoModels.add(new DemoModel("通讯录",DemoModel.SECTION_CONTENT, ContactActivity.class));
         demoModels.add(new DemoModel("树形结构通讯录",DemoModel.SECTION_CONTENT, TreeContactActivity.class));
         demoModels.add(new DemoModel("多布局", DemoModel.SECTION_CONTENT, RcyMultiLayoutOneActivity.class));
+        demoModels.add(new DemoModel("多布局1", DemoModel.SECTION_CONTENT, RcyMultiLayoutGridActivity.class));
         demoModels.add(new DemoModel("自定义组合控件",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("底部导航栏",DemoModel.SECTION_CONTENT, BottomNavDemoActivity.class));
         demoModels.add(new DemoModel("其它demo",DemoModel.SECTION_CONTENT, GroupDemoActivity.class));
@@ -68,6 +72,9 @@ public class DataServer {
         demoModels.add(new DemoModel("CoordinatorLayout",DemoModel.SECTION_HEADER));
         demoModels.add(new DemoModel("CoordinatorLayout吸顶demo1", DemoModel.SECTION_CONTENT, HangTopActivity.class));
         demoModels.add(new DemoModel("Viewpager特效", DemoModel.SECTION_CONTENT, ViewPagerDemoActivity.class));
+        demoModels.add(new DemoModel("系统UI", DemoModel.SECTION_HEADER));
+        demoModels.add(new DemoModel("全屏", DemoModel.SECTION_CONTENT, FullscreenActivity.class));
+        demoModels.add(new DemoModel("全屏", DemoModel.SECTION_CONTENT, MyFullScreenActivity.class));
 
         return demoModels;
     }
