@@ -14,7 +14,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.parade.demoproject.R;
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 
 /***
  *author: parade岁月

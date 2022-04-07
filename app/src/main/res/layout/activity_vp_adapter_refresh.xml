@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vp.VpAdapterRefresh"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_16">
+
+
+    <TextView
+        android:id="@+id/tv_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="PageAdapter刷新问题"
+        tools:ignore="HardcodedText"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PageAdapter简单使用"
+        android:id="@+id/btn_simpledemo"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        tools:ignore="HardcodedText,UsingOnClickInXml" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_pageradapter"
+        android:text="PageAdapter简单使用-粗暴修改POSITION_NONE"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        tools:ignore="HardcodedText,UsingOnClickInXml"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FragmentPagerAdapter1"
+        android:id="@+id/btn_fpageradapter1"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        tools:ignore="HardcodedText,UsingOnClickInXml"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FragmentPagerAdapter2"
+        android:id="@+id/btn_fpageradapter2"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        tools:ignore="HardcodedText,UsingOnClickInXml"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FragmentStatePagerAdapter"
+        android:id="@+id/btn_fspageradapter"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        tools:ignore="HardcodedText,UsingOnClickInXml"/>
+
+
+</LinearLayout>

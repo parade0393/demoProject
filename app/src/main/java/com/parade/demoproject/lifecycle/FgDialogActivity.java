@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.parade.demoproject.DemoActivity;
 import com.parade.demoproject.R;
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 import com.parade.demoproject.view.one.CommomDialog;
 
 /**

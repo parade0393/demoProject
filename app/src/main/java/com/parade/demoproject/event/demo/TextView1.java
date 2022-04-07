@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 
 /**
  * @author : parade

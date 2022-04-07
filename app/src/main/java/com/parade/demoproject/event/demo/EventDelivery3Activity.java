@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.parade.demoproject.DemoActivity;
 import com.parade.demoproject.R;
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 
 public class EventDelivery3Activity extends DemoActivity implements FragmentLifeListener, View.OnClickListener {
 

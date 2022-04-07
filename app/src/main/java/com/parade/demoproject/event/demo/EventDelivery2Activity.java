@@ -1,14 +1,12 @@
 package com.parade.demoproject.event.demo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.parade.demoproject.DemoActivity;
 import com.parade.demoproject.R;
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 
 public class EventDelivery2Activity extends DemoActivity implements FragmentLifeListener, View.OnClickListener {
 

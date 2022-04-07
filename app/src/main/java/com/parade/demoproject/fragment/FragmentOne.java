@@ -14,7 +14,7 @@ import androidx.lifecycle.Lifecycle;
 
 import com.parade.demoproject.base.BaseFragment;
 import com.parade.demoproject.R;
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 
 /***
  *author: parade岁月
@@ -24,6 +24,11 @@ import com.parade.demoproject.listener.FragmentLifeListener;
 public class FragmentOne extends BaseFragment {
     private TextView tv_flag;
     private FragmentLifeListener lifeListener;
+
+    public FragmentOne() {
+        super();
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_demo;
@@ -58,7 +63,6 @@ public class FragmentOne extends BaseFragment {
             lifeListener = (FragmentLifeListener) getActivity();
         }
         if (lifeListener != null){
-
             lifeListener.sendContent("FragmentOne首页:==>onAttach::"+handleLifecycleData()+"\n");
         }
     }
@@ -188,4 +192,11 @@ public class FragmentOne extends BaseFragment {
         return stateString;
     }
 
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentOne首页:onSaveInstanceState"+"\n");
+        }
+        super.onSaveInstanceState(outState);
+    }
 }

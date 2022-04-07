@@ -2,17 +2,19 @@ package com.parade.demoproject.lifecycle;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.parade.baseproject.adapter.CommonFragmentPagerAdapter;
 import com.parade.baseproject.util.view.BottomNavView;
 import com.parade.demoproject.DemoActivity;
 import com.parade.demoproject.R;
@@ -30,7 +32,7 @@ import java.util.List;
  * description: fragment集合viewpager声明周期使用FragmentPageAdapter
  * date: 2020-2-14 9:24:55
  */
-public class FragmentVpActivity extends DemoActivity implements View.OnClickListener, BottomNavView.OnBottomViewItemSelectedListener, FragmentLifeListener {
+public class FragmentVpStateActivity extends DemoActivity implements View.OnClickListener, BottomNavView.OnBottomViewItemSelectedListener, FragmentLifeListener {
     private ViewPager viewpager;
     private String[] mTitleList;
     private int[] mSelectedIcon,mUnSelectedIcon;
@@ -41,9 +43,9 @@ public class FragmentVpActivity extends DemoActivity implements View.OnClickList
     private int oldPosition;
 
     private Fragment fragmentOne,fragmentTwo,fragmentThree,fragmentFour;
+
     private Bundle save;
     private StringBuilder builder = new StringBuilder();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +61,7 @@ public class FragmentVpActivity extends DemoActivity implements View.OnClickList
         tv_title = (TextView) findViewById(R.id.tv_title);
         tv_cycle = (TextView) findViewById(R.id.tv_cycle);
         bottom_nav = (BottomNavView) findViewById(R.id.bottom_nav);
-        tv_title.setText("fragment声明周期vp");
+        tv_title.setText("fragment声明周期vpState");
         if (save != null){
             tv_cycle.append("Activity:==>旧数据"+"\n");
             tv_cycle.append(save.getString("tv"));
@@ -128,7 +130,56 @@ public class FragmentVpActivity extends DemoActivity implements View.OnClickList
         fragmentList.add(fragmentThree);
         fragmentList.add(fragmentFour);
 
-        viewpager.setAdapter(new CommonFragmentPagerAdapter(getSupportFragmentManager(),fragmentList,this));
+//        viewpager.setAdapter(new CommonFragmentPagerAdapter(getSupportFragmentManager(),fragmentList));
+        viewpager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
+            @NonNull
+            @Override
+            public Fragment getItem(int position) {
+                if (tv_cycle != null){
+                    tv_cycle.append("adapter-getItem-position:"+position+"\n");
+                }
+                return fragmentList.get(position);
+            }
+
+            @NonNull
+            @Override
+            public Object instantiateItem(@NonNull ViewGroup container, int position) {
+                if (tv_cycle != null){
+                    tv_cycle.append("adapter-instantiateItem-position:"+position+"\n");
+                }
+                return super.instantiateItem(container, position);
+            }
+
+            @Override
+            public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+                if (tv_cycle != null){
+                    tv_cycle.append("adapter-destroyItem-position:"+position+"\n");
+                }
+                super.destroyItem(container, position, object);
+            }
+
+            @Override
+            public int getCount() {
+                return fragmentList.size();
+            }
+
+            @Override
+            public int getItemPosition(@NonNull Object object) {
+                if (tv_cycle != null){
+                    tv_cycle.append("adapter-getItemPosition:"+"\n");
+                }
+                return super.getItemPosition(object);
+            }
+
+            @Nullable
+            @Override
+            public Parcelable saveState() {
+                if (tv_cycle != null){
+                    tv_cycle.append("FragmentStatePagerAdapter-saveState-:"+"\n");
+                }
+                return super.saveState();
+            }
+        });
     }
 
     @Override

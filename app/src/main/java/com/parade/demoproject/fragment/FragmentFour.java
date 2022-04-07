@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 
 import com.parade.demoproject.base.BaseFragment;
 import com.parade.demoproject.R;
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 
 /***
  *author: parade岁月
@@ -153,5 +153,13 @@ public class FragmentFour extends BaseFragment {
         if (lifeListener != null){
             lifeListener.sendContent("FragmentFour设置:==>数据加载"+"\n");
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentFour设置:onSaveInstanceState"+"\n");
+        }
+        super.onSaveInstanceState(outState);
     }
 }

@@ -1,10 +1,13 @@
 package com.parade.demoproject.lifecycle;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -17,7 +20,7 @@ import com.parade.demoproject.fragment.FragmentFour;
 import com.parade.demoproject.fragment.FragmentOne;
 import com.parade.demoproject.fragment.FragmentThree;
 import com.parade.demoproject.fragment.FragmentTwo;
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,10 +42,13 @@ public class FragmentLazyActivity extends DemoActivity implements View.OnClickLi
 
     private Fragment fragmentOne,fragmentTwo,fragmentThree,fragmentFour;
 
+    private Bundle save;
+    private StringBuilder builder = new StringBuilder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.save = savedInstanceState;
         setContentView(R.layout.activity_fragment_vp);
     }
 
@@ -54,6 +60,16 @@ public class FragmentLazyActivity extends DemoActivity implements View.OnClickLi
         tv_cycle = (TextView) findViewById(R.id.tv_cycle);
         bottom_nav = (BottomNavView) findViewById(R.id.bottom_nav);
         tv_title.setText("fragment懒加载");
+        if (save != null){
+            tv_cycle.append("Activity:==>旧数据"+"\n");
+            tv_cycle.append(save.getString("tv"));
+            tv_cycle.append("============="+"\n");
+        }
+        if (!TextUtils.isEmpty(builder.toString())){
+            tv_cycle.append("Activity:重启restoreState==>"+builder.toString()+"\n");
+        }
+        tv_cycle.append("Activity:==>新数据"+"\n");
+        tv_cycle.append("Activity:==>onCreate"+"\n");
     }
 
     @Override
@@ -134,6 +150,57 @@ public class FragmentLazyActivity extends DemoActivity implements View.OnClickLi
 
     @Override
     public void sendContent(String content) {
-        tv_cycle.append(content);
+        if (tv_cycle == null){
+            builder.append(content);
+        }else {
+            tv_cycle.append(content);
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        tv_cycle.append("Activity:==>onStart"+"\n");
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        tv_cycle.append("Activity:==>onResume"+"\n");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        tv_cycle.append("Activity:==>onPause"+"\n");
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        tv_cycle.append("Activity:==>onSaveInstanceState"+"\n");
+        outState.putString("tv",tv_cycle.getText().toString());
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        tv_cycle.append("Activity:==>onStop"+"\n");
+    }
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        tv_cycle.append("Activity:==>onNewIntent"+"\n");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        tv_cycle.append("Activity:==>onRestart"+"\n");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        tv_cycle.append("Activity:==>onDestroy"+"\n");
     }
 }

@@ -9,12 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sysui.MyFullScreenActivity" android:theme="@style/AppTheme.Full"/>
+        <activity android:name=".vp.FSPagerAdapterActivity"></activity>
+        <activity android:name=".vp.FPageAdapter2Activity" />
+        <activity android:name=".vp.FPageAdapter1Activity" />
+        <activity android:name=".vp.SimpleAlterGetItemPositionActivity" />
+        <activity android:name=".lifecycle.FragmentLifeDetachActivity" />
+        <activity android:name=".vp.SimpleDemoActivity" />
+        <activity android:name=".lifecycle.FragmentLifeShowActivity" />
+        <activity android:name=".vp.VpAdapterRefresh" />
+        <activity
+            android:name=".sysui.MyFullScreenActivity"
+            android:theme="@style/AppTheme.Full" />
         <activity
             android:name=".sysui.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fullscreen"
-            android:theme="@style/AppTheme.Fullscreen"/>
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".lifecycle.FragmentVpStateActivity" />
         <activity android:name=".recyclerview.RcyMultiLayoutGridActivity" />
         <activity android:name=".recyclerview.RcyMultiLayoutOneActivity" />
         <activity android:name=".vp.VpAutoAcKttivity" />

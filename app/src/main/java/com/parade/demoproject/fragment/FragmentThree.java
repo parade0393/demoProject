@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 
 import com.parade.demoproject.base.BaseFragment;
 import com.parade.demoproject.R;
-import com.parade.demoproject.listener.FragmentLifeListener;
+import com.parade.baseproject.listener.FragmentLifeListener;
 
 /***
  *author: parade岁月
@@ -22,6 +22,9 @@ import com.parade.demoproject.listener.FragmentLifeListener;
 public class FragmentThree extends BaseFragment {
     private TextView tv_flag;
     private FragmentLifeListener lifeListener;
+    public FragmentThree() {
+        super();
+    }
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_demo;
@@ -161,5 +164,13 @@ public class FragmentThree extends BaseFragment {
         if (lifeListener != null){
             lifeListener.sendContent("FragmentThree我的:==>数据加载"+"\n");
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        if (lifeListener != null){
+            lifeListener.sendContent("FragmentThree我的:onSaveInstanceState"+"\n");
+        }
+        super.onSaveInstanceState(outState);
     }
 }
