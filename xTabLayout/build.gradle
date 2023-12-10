@@ -3,11 +3,11 @@ plugins{
 }
 
 android {
-    compileSdkVersion 29
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 29
+        minSdkVersion  19
+        targetSdkVersion  34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -24,6 +24,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation(libs.appcompat)
 
 }

@@ -1,0 +1,43 @@
+[versions]
+agp = "8.2.0"
+flexbox = "3.0.0"
+gson = "2.10"
+kotlin = "1.9.0"
+ktx = "1.12.0"
+appcompat = "1.6.1"
+constraintlayout = "2.1.4"
+recyclerview = "1.3.2"
+recyclerview-selection = "1.1.0"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+qmui = "2.0.0-alpha02"
+tinypinyin = "2.0.1"
+brvah = "3.0.6"
+compileSdk = "34"
+minSdkVersion = "19"
+targetSdkVersion = "34"
+versionCode = "1"
+versionName = "1.0.0"
+
+[libraries]
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androix-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview"}
+flexbox = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+recyclerview-selection = { group = "androidx.recyclerview", name = "recyclerview-selection", version.ref="recyclerview-selection"}
+recyclerview-adapter = { group = "com.github.CymChad", name = "BaseRecyclerViewAdapterHelper", version.ref = "brvah"}
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+qmui-android = { group = "com.qmuiteam", name = "qmui", version.ref = "qmui"}
+tiny-pinyin = {group = "com.github.promeG", name="tinypinyin", version.ref = "tinypinyin"}
+
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
