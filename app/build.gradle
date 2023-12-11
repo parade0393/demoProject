@@ -8,13 +8,13 @@ plugins{
 //apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 34
+    compileSdk libs.versions.compileSdk.get() as Integer
     defaultConfig {
         applicationId "com.parade.demoproject"
-        minSdkVersion 19
-        targetSdkVersion 34
-        versionCode 1
-        versionName "1.0.0"
+        minSdkVersion libs.versions.minSdkVersion.get() as Integer
+        targetSdkVersion libs.versions.targetSdkVersion.get() as Integer
+        versionCode libs.versions.versionCode.get() as Integer
+        versionName libs.versions.versionName.get()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
@@ -35,7 +35,6 @@ android {
 dependencies {
 
     implementation project(path: ':xTabLayout')
-    def recyclerview_version = "1.2.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
